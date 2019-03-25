@@ -1,14 +1,25 @@
+# Entidad autor
 type Author {
+	# Identificador
     id: ID!
+    # Primer nombre del autor
     firstName: String!
+    # Último nombre del autor
     lastName: String!
 }
 
 type Query {
-    findAllAuthors: [Author]!
+	# Recupera todos los autores
+    findAllAuthors: [Author]! 
+    # Recupera el número de autores
     countAuthors: Long!
 }
 
 type Mutation {
-    newAuthor(firstName: String!, lastName: String!) : Author!
+	# Da de alta un nuevo autor
+    newAuthor(
+    	# Primer nombre del autor a dar de alta
+    	firstName: String!, 
+    	# Último nombre del autor a dar de alta
+    	lastName: String!) : Author!
 }

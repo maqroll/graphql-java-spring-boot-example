@@ -1,18 +1,45 @@
+# Entidad libro
 type Book {
+	# Identificador
     id: ID!
+    # Titulo
     title: String!
+    # ISBN
     isbn: String!
+    # Número de páginas del libro
     pageCount: Int
+    # Autor del libro
     author: Author
 }
 
 extend type Query {
+	# Recupera todos los libros
     findAllBooks: [Book]!
+    # Recupera el número de libros registrados
     countBooks: Long!
 }
 
 extend type Mutation {
-    newBook(title: String!, isbn: String!, pageCount: Int, author: ID!) : Book!
-    deleteBook(id: ID!) : Boolean
-    updateBookPageCount(pageCount: Int!, id: ID!) : Book!
+	# Dá de alta un nuevo libro
+    newBook(
+    	# Título
+    	title: String!,
+    	# ISBN
+    	isbn: String!,
+    	# Número de páginas 
+    	pageCount: Int, 
+    	# Identificador del autor
+    	author: ID!) : Book!
+    
+    # Borrar un libro	
+    deleteBook(
+    # Identificador del libro
+    id: ID!) : Boolean
+    
+    # Actualiza el número de páginas de un libro
+    updateBookPageCount(
+    	# Número de páginas
+    	pageCount: Int!, 
+    	# Identificador del libro
+    	id: ID!) : Book!
 }
