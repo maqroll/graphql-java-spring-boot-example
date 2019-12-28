@@ -1,4 +1,1 @@
-- Java 8
-- Added voyager tool
-- Queries like https://github.com/prisma/prisma-examples/blob/master/node/graphql/src/generated/prisma-client/prisma-schema.js
-- Theory in https://www.paradigmadigital.com/dev/graphql-todos-uno-uno-todos-22/
+
