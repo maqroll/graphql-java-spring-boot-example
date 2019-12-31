@@ -10,7 +10,6 @@ import com.example.DemoGraphQL.resolver.Mutation;
 import com.example.DemoGraphQL.resolver.Query;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
-import graphql.servlet.GraphQLErrorHandler;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,6 +26,7 @@ public class DemoGraphQlApplication {
 		SpringApplication.run(DemoGraphQlApplication.class, args);
 	}
 
+	/* TODO
 	@Bean
 	public GraphQLErrorHandler errorHandler() {
 		return new GraphQLErrorHandler() {
@@ -51,7 +51,7 @@ public class DemoGraphQlApplication {
 				return !(error instanceof ExceptionWhileDataFetching || error instanceof Throwable);
 			}
 		};
-	}
+	}*/
 
 	@Bean
 	public BookResolver authorResolver(AuthorRepository authorRepository) {
