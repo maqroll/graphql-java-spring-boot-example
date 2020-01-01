@@ -55,8 +55,8 @@ public class DemoGraphQlApplication {
 	}
 
 	@Bean
-	public BookResolver authorResolver(AuthorRepository authorRepository) {
-		return new BookResolver(authorRepository);
+	public BookResolver authorResolver() {
+		return new BookResolver();
 	}
 
 	@Bean

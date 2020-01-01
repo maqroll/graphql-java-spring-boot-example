@@ -1,7 +1,6 @@
 package com.example.DemoGraphQL.exception;
 
 import graphql.ErrorClassification;
-import graphql.ErrorType;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
